@@ -117,7 +117,7 @@ function draw() {
 
     if (snakeX < box || snakeY < box || snakeX > (canvasSize - 1) * box || snakeY > (canvasSize - 1) * box || collision(newHead, snake)) {
         clearInterval(game);
-        alert("GAME OVER!");
+        alert("GAME OVER! Score is: "+score);
 
     }
     snake.unshift(newHead); //creates or adds newhead to the snake
@@ -126,5 +126,12 @@ function draw() {
 
     ctx.fillStyle = "red";
     ctx.fillRect(food.x, food.y, box, box);
+    
+    //draw score 
+
+    ctx.fillStyle = 'White';
+    ctx.font = "24px Changa one";
+    ctx.clearRect(0, 0, 50, 25); //shows at the top most
+    ctx.fillText(score, box, 0.8 * box);
 }
 let game = setInterval(draw, 100);
