@@ -21,19 +21,19 @@ let dir;
 document.addEventListener('keydown', direction); //event listener for direction
 
 function direction(event) {
-    if (event.keyCode == 37) //every key in keyboard has a value left is 37, up is 38 right is 39, down is 40
+     if (event.keyCode == 37 && dir != "RIGHT") //every key in keyboard has a value left is 37, up is 38 right is 39, down is 40
     {
         dir = "LEFT";
     }
-    if (event.keyCode == 38) //every key in keyboard has a value left is 37, up is 38 right is 39, down is 40
+    if (event.keyCode == 38 && dir != "DOWN") //every key in keyboard has a value left is 37, up is 38 right is 39, down is 40
     {
         dir = "UP";
     }
-    if (event.keyCode == 39) //every key in keyboard has a value left is 37, up is 38 right is 39, down is 40
+    if (event.keyCode == 39 && dir != "LEFT") //every key in keyboard has a value left is 37, up is 38 right is 39, down is 40
     {
         dir = "RIGHT";
     }
-    if (event.keyCode == 40) //every key in keyboard has a value left is 37, up is 38 right is 39, down is 40
+    if (event.keyCode == 40 && dir != "UP") //every key in keyboard has a value left is 37, up is 38 right is 39, down is 40
     {
         dir = "DOWN";
     }
